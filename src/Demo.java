@@ -19,12 +19,16 @@ public class Demo {
                     "1- Create a Task\n" +
                     "2- Update a Task\n" +
                     "3- Show all Tasks\n" +
-                    "4- Assign the Task\n" +
-                    "5- Remove the Task\n" +
-                    "6- Exit\n" +
-                    "\nPlease enter number from 1 to 6 :");
+                    "4- Sort tasks by name\n" +
+                    "5- Sort tasks by due date\n" +
+                    "6- Delete a task by id\n" +
+                    "7- Update a task name get by id\n" +
+                    "8-Update task description get by id\n" +
+                    "9-Update task due date get by id\n" +
+                    "10- Exit\n" +
+                    "\nPlease enter number from 1 to 10 :");
             toDo = Integer.parseInt(scanner.nextLine());
-            if (toDo < 1 || toDo > 6) {
+            if (toDo < 1 || toDo > 10) {
                 System.out.println("!!!You entered wrong number.");
             }
             else {
@@ -39,17 +43,40 @@ public class Demo {
                     case 3:
                         showList(taskList);
                         break;
-                    case 4:
-                        AssignTask();
+                    case 4:sortByName();
                         break;
                     case 5:
-                        removeTask();
+                        sortTasksbyDueDate();
                         break;
                     case 6:
+                        deleteTasksById();
+                        break;
+                    case 7:
+                        updateTaskNameById();
+                        break;
+                    case 8:
+                        updateTaskDescriptionById();
+                        break;
+                    case 9:
+                        updateTaskDueDateById();
+                        break;
+                    case 10:
                         break;
                 }
             }
         }
+    }
+
+    private static void updateTaskDueDateById() {
+    }
+
+    private static void updateTaskDescriptionById() {
+    }
+
+    private static void updateTaskNameById() {
+    }
+
+    private static void deleteTasksById() {
     }
 
     public static String typeTask() {
@@ -131,9 +158,9 @@ public class Demo {
 
     }
 
-    private static void AssignTask() {
+    private static void sortByName() {
     }
 
-    private static void removeTask() {
+    private static void sortTasksbyDueDate() {
     }
 }

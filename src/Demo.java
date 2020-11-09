@@ -94,17 +94,15 @@ public class Demo {
         String name = scanner.nextLine();
 
         //System.out.println("\n\tEnter the Task\'s due date : (MM-DD-YYYY)");
-        System.out.println(" Enter in  following format : dd-mm-yyyy");
+        System.out.println(" Enter the Due Date in the following format : dd-mm-yyyy");
         String dueDate = scanner.nextLine();
         Task.Status status = Task.Status.CREATED;
 
-
-
         if (taskType =="Timed Task") {
-            System.out.println(" Enter in  following format : dd-mm-yyyy");
+            System.out.println(" Enter the Start Date in the following format : dd-mm-yyyy");
             String startDate = scanner.nextLine();
 
-            System.out.println(" Enter in  following format : dd-mm-yyyy");
+            System.out.println(" Enter the End date in the following format : dd-mm-yyyy");
             String endDate = scanner.nextLine();
             return new TimedTask(id, name, dueDate, status, startDate, endDate);
         }
@@ -114,10 +112,10 @@ public class Demo {
             return new AssignedTask(id, name, dueDate, status, assignedTo);
         }
         else if (taskType =="Assigned Timed Task") {
-            System.out.println(" Enter in  following format : dd-mm-yyyy");
+            System.out.println(" Enter the Start Date in the following format : dd-mm-yyyy");
             String startDate = scanner.nextLine();
 
-            System.out.println(" Enter in  following format : dd-mm-yyyy");
+            System.out.println(" Enter the End date in the following format : dd-mm-yyyy");
             String endDate = scanner.nextLine();
 
             System.out.println("\n\tEnter the person name to assign Task : ");
@@ -132,8 +130,6 @@ public class Demo {
         System.out.println("Please ");
 
     }
-
-
 
     private static void AssignTask() {
     }

@@ -28,6 +28,7 @@ public class Demo {
                     "10- Exit\n" +
                     "\nPlease enter number from 1 to 10 :");
             toDo = Integer.parseInt(scanner.nextLine());
+
             if (toDo < 1 || toDo > 10) {
                 System.out.println("!!!You entered wrong number.");
             }

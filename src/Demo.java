@@ -67,6 +67,15 @@ public class Demo {
         }
     }
 
+    private static void updateTask() {
+    }
+
+    private static void sortByName() {
+    }
+
+    private static void sortTasksbyDueDate() {
+    }
+
     private static void updateTaskDueDateById() {
     }
 
@@ -153,14 +162,5 @@ public class Demo {
         return null;
     }
 
-    private static void updateTask() {
-        System.out.println("Please ");
 
-    }
-
-    private static void sortByName() {
-    }
-
-    private static void sortTasksbyDueDate() {
-    }
 }

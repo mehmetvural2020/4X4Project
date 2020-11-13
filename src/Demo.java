@@ -1,19 +1,17 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Demo {
     static Scanner scanner  = new Scanner(System.in);
-
-    //creating a method that accepts only child class of Shape
+    static List<Task> taskList = new ArrayList<>();
+    static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    static String date;
+//    static LocalDateTime startDate  = LocalDateTime.parse(time,formatter);
     public static void main(String[] args){
-
         int toDo = 0;
-//        TimedTask task = new TimedTask();
-
-        List<Task> taskList = new ArrayList<>();
-
-//        ArrayList<TimedTask> task;
-//        task = new ArrayList<TimedTask>();
-        while(toDo != 6){
+        while(toDo != 10){
             System.out.println();
             System.out.print("What would you like to do?\n" +
                     "1- Create a Task\n" +
@@ -42,7 +40,7 @@ public class Demo {
                         updateTask();
                         break;
                     case 3:
-                        showList(taskList);
+                        showList();
                         break;
                     case 4:sortByName();
                         break;
@@ -115,51 +113,49 @@ public class Demo {
 
     }
 
-        public static void showList(List list) {
-//        System.out.println(Arrays.toString(list.toArray()));
-        for (Object l : list) {
-            System.out.println(l);
-        }
+        public static void showList() {
+            for (int i = 0; i < taskList.size(); i++){
+                System.out.println(taskList.get(i));
+            }
     }
 
     public static Task createTask(){
         String taskType = typeTask();
-        System.out.println("\n\tEnter the Task id : ");
+        System.out.print("\n\tEnter the Task id : ");
         int id = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("\n\tEnter the Task name : ");
+        System.out.print("\n\tEnter the Task name : ");
         String name = scanner.nextLine();
 
-        //System.out.println("\n\tEnter the Task\'s due date : (MM-DD-YYYY)");
-        System.out.println(" Enter the Due Date in the following format : dd-mm-yyyy");
-        String dueDate = scanner.nextLine();
+        System.out.print("\n\tEnter the Due Date in the following format (yyyy-MM-dd) : ");
+        date = scanner.nextLine();
+        LocalDate dueDate  = LocalDate.parse(date,formatter);
+
         Task.Status status = Task.Status.CREATED;
 
         if (taskType =="Timed Task") {
-            System.out.println(" Enter the Start Date in the following format : dd-mm-yyyy");
-            String startDate = scanner.nextLine();
+            System.out.print("\n\tEnter the Start Date in the following format (yyyy-MM-dd) : ");
+            date = scanner.nextLine();
+            LocalDate startDate  = LocalDate.parse(date,formatter);
 
-            System.out.println(" Enter the End date in the following format : dd-mm-yyyy");
-            String endDate = scanner.nextLine();
-            return new TimedTask(id, name, dueDate, status, startDate, endDate);
+            return new TimedTask(id, name, dueDate, status, startDate);
         }
         else if (taskType =="Assigned Task") {
-            System.out.println("\n\tEnter the person name to assign Task : ");
+            System.out.print("\n\tEnter the person name to assign Task : ");
             String assignedTo = scanner.nextLine();
+
             return new AssignedTask(id, name, dueDate, status, assignedTo);
         }
         else if (taskType =="Assigned Timed Task") {
-            System.out.println(" Enter the Start Date in the following format : dd-mm-yyyy");
-            String startDate = scanner.nextLine();
+            System.out.print("\n\tEnter the Start Date in the following format (yyyy-MM-dd) : ");
+            date = scanner.nextLine();
+            LocalDate startDate  = LocalDate.parse(date,formatter);
 
-            System.out.println(" Enter the End date in the following format : dd-mm-yyyy");
-            String endDate = scanner.nextLine();
-
-            System.out.println("\n\tEnter the person name to assign Task : ");
+            System.out.print("\n\tEnter the person name to assign Task : ");
             String assignedTo = scanner.nextLine();
-            return new AssignedTimedTask(id, name, dueDate, status, startDate, endDate, assignedTo);
+            return new AssignedTimedTask(id, name, dueDate, status, startDate, assignedTo);
         }
-        System.out.println("You entered more than 4 times wrong Task Type!!! or you canceled to enter task type.");
+        System.out.print("You entered more than 4 times wrong Task Type!!! or you canceled to enter task type.");
         return null;
     }
 

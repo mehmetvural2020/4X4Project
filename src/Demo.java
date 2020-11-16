@@ -115,10 +115,14 @@ public class Demo {
 
     }
 
-        public static void showList() {
-            for (int i = 0; i < taskList.size(); i++){
-                System.out.println(taskList.get(i));
-            }
+    public static void showList() {
+        //Option 1 :
+//        for (int i = 0; i < taskList.size(); i++){
+//            System.out.println(taskList.get(i));
+//        }
+
+        //Option 2 :
+        taskList.forEach((task) -> System.out.println(task));
     }
 
     public static Task createTask(){

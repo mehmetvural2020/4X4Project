@@ -70,9 +70,11 @@ public class Demo {
     }
 
     private static void sortByName() {
+        taskList.sort((Task t1, Task t2)->t1.getName().compareTo(t2.getName()));
     }
 
     private static void sortTasksbyDueDate() {
+        taskList.sort(Comparator.comparing(Task::getDueDate));
     }
 
     private static void updateTaskDueDateById() {

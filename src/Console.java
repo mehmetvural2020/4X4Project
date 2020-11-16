@@ -21,7 +21,6 @@ public class Console {
                 System.out.println("!!!You entered wrong number.");
             }
             else {
-                System.out.println(toDo);
                 switch (toDo) {
                     case 1:
                         Main.taskList.add(CreateTask.createTask());

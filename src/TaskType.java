@@ -2,11 +2,13 @@ public class TaskType {
     public static String typeTask() {
         int typeTask = 0;
         while (typeTask != 4) {
-            System.out.println("What kind of Task do you want to create? Please enter number from 1 to 4 : \n" +
+            System.out.print("What kind of Task do you want to create? \n" +
                     "1- Timed Task\n" +
                     "2- Assigned Task\n" +
                     "3- Assigned Timed Task\n" +
-                    "4- Previous menu");
+                    "4- Previous menu\n" +
+                    "Please enter number from 1 to 4 : ");
+
             typeTask = Integer.parseInt(Main.scanner.nextLine());
             if (typeTask == 1) {
                 return "Timed Task";

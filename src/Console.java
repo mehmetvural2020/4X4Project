@@ -5,7 +5,7 @@ public class Console {
             System.out.println();
             System.out.print("What would you like to do?\n" +
                     "1- Create a Task\n" +
-                    "2- Update a Task\n" +
+                    "2- Add Task Automatically\n" +
                     "3- Show all Tasks\n" +
                     "4- Sort tasks by name\n" +
                     "5- Sort tasks by due date\n" +
@@ -26,7 +26,7 @@ public class Console {
                         Main.taskList.add(CreateTask.createTask());
                         break;
                     case 2:
-                        UpdateTask.updateTask();
+                        AddTasksAutomatically.addTask();
                         break;
                     case 3:
                         ShowTaskList.showList();

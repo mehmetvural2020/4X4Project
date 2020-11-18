@@ -6,6 +6,7 @@ public class ShowTaskList {
 //        }
 
         //Option 2 :
+        if(Main.taskList.isEmpty()) System.out.println("!!!There is no Task...");
         Main.taskList.forEach((task) -> System.out.println(task));
     }
 }

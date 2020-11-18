@@ -4,6 +4,8 @@ public class UpdateTask {
     }
 
     public static void updateTaskNameById() {
+        Main.taskList.removeIf(t -> (t.id == 11));
+
     }
 
     public static void updateTaskDescriptionById() {
@@ -13,5 +15,6 @@ public class UpdateTask {
     }
 
     public static void updateTask() {
+
     }
 }

@@ -20,13 +20,12 @@ public class AssignedTimedTask extends Task {
 
     @Override
     public String toString() {
-        return "AssignedTimedTask{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", dueDate=" + dueDate +
-                ", status=" + status +
-                ", startDate=" + startDate +
-                ", assignedTo='" + assignedTo + '\'' +
-                '}';
+        return "\nAssignedTimedTask : " +
+                "\n\tid= " + id +
+                "\n\tname= '" + name + '\'' +
+                "\n\tdueDate= " + dueDate +
+                "\n\tstatus= " + status +
+                "\n\tstartDate= " + startDate +
+                "\n\tassignedTo= '" + assignedTo + '\'';
     }
 }

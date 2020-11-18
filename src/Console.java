@@ -14,7 +14,7 @@ public class Console {
                     "8-Update task description get by id\n" +
                     "9-Update task due date get by id\n" +
                     "10- Exit\n" +
-                    "\nPlease enter number from 1 to 10 :");
+                    "Please enter number from 1 to 10 : ");
             toDo = Integer.parseInt(Main.scanner.nextLine());
 
             if (toDo < 1 || toDo > 10) {

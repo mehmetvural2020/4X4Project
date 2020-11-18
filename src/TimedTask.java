@@ -17,12 +17,11 @@ public class TimedTask extends Task {
 
     @Override
     public String toString() {
-        return "TimedTask{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", dueDate=" + dueDate +
-                ", status=" + status +
-                ", startDate=" + startDate +
-                '}';
+        return "\nTimedTask : " +
+                "\n\tid= " + id +
+                "\n\tname= '" + name + '\'' +
+                "\n\tdueDate= " + dueDate +
+                "\n\tstatus= " + status +
+                "\n\tstartDate= " + startDate;
     }
 }

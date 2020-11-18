@@ -11,6 +11,7 @@ public abstract class Task {
     String name;
     LocalDate dueDate;
     Status status;
+
     public Task() {
     }
 

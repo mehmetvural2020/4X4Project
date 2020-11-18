@@ -15,12 +15,11 @@ public class AssignedTask extends Task{
 
     @Override
     public String toString() {
-        return "AssignedTask{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", dueDate=" + dueDate +
-                ", status=" + status +
-                ", assignedTo='" + assignedTo + '\'' +
-                '}';
+        return "\nAssignedTask : " +
+                "\n\tid= " + id +
+                "\n\tname= '" + name + '\'' +
+                "\n\tdueDate= " + dueDate +
+                "\n\tstatus= " + status +
+                "\n\tassignedTo= '" + assignedTo + '\'';
     }
 }

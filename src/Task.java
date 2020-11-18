@@ -37,5 +37,21 @@ public abstract class Task {
     public Status getStatus() {
         return status;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 }
 

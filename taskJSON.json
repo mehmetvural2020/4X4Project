@@ -1,0 +1,39 @@
+[
+TimedTask : 
+	id= 101
+	name= 'Task1'
+	dueDate= 2020-01-05
+	status= CREATED
+	startDate= 2020-01-01,
+TimedTask : 
+	id= 102
+	name= 'Task2'
+	dueDate= 2020-01-15
+	status= CREATED
+	startDate= 2020-01-01,
+AssignedTask : 
+	id= 203
+	name= 'Task3'
+	dueDate= 2020-01-25
+	status= CREATED
+	assignedTo= 'Brown',
+AssignedTask : 
+	id= 204
+	name= 'Task4'
+	dueDate= 2020-01-20
+	status= CREATED
+	assignedTo= 'John',
+AssignedTimedTask : 
+	id= 303
+	name= 'Task5'
+	dueDate= 2020-01-10
+	status= CREATED
+	startDate= 2020-01-10
+	assignedTo= 'Brown',
+AssignedTimedTask : 
+	id= 304
+	name= 'Task6'
+	dueDate= 2020-01-09
+	status= CREATED
+	startDate= 2020-01-10
+	assignedTo= 'John']

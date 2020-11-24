@@ -12,7 +12,7 @@ public class Console {
                     "6- Delete a task by id\n" +
                     "7- Update a task name get by id\n" +
                     "8-Update task description get by id\n" +
-                    "9-Update task due date get by id\n" +
+                    "9-Export task JSON file\n" +
                     "10- Exit\n" +
                     "Please enter number from 1 to 10 : ");
             toDo = Integer.parseInt(Main.scanner.nextLine());
@@ -47,7 +47,7 @@ public class Console {
                         UpdateTask.updateTaskDescriptionById();
                         break;
                     case 9:
-                        UpdateTask.updateTaskDueDateById();
+                        ShowTaskList.writeJSONFile();
                         break;
                     case 10:
                         break;

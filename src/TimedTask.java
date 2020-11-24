@@ -15,13 +15,22 @@ public class TimedTask extends Task {
         this.startDate = startDate;
     }
 
+//    @Override
+//    public String toString() {
+//        return "\nTimedTask : " +
+//                "\n\tid= " + id +
+//                "\n\tname= '" + name + '\'' +
+//                "\n\tdueDate= " + dueDate +
+//                "\n\tstatus= " + status +
+//                "\n\tstartDate= " + startDate;
+//    }
+
     @Override
     public String toString() {
-        return "\nTimedTask : " +
-                "\n\tid= " + id +
-                "\n\tname= '" + name + '\'' +
-                "\n\tdueDate= " + dueDate +
-                "\n\tstatus= " + status +
-                "\n\tstartDate= " + startDate;
+        return "\n\t{\"id\"" + ": " + id + "," +
+                "\n\t\"name\"" + ": \""  + name  + "\","  +
+                "\n\t\"dueDate\"" + ": \""  + dueDate + "\","  +
+                "\n\t\"status\"" + ": \""  + status + "\","  +
+                "\n\t\"startDate\"" + ": \""  + startDate + "\"\n\t}";
     }
 }

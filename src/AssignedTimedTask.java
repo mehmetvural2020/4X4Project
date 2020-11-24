@@ -18,14 +18,24 @@ public class AssignedTimedTask extends Task {
         this.assignedTo = assignedTo;
     }
 
+//    @Override
+//    public String toString() {
+//        return "\n{AssignedTimedTask : " +
+//                "\n\tid= " + id +
+//                "\n\tname= '" + name + '\'' +
+//                "\n\tdueDate= " + dueDate +
+//                "\n\tstatus= " + status +
+//                "\n\tstartDate= " + startDate +
+//                "\n\tassignedTo= '" + assignedTo + '\'';
+//    }
     @Override
     public String toString() {
-        return "\nAssignedTimedTask : " +
-                "\n\tid= " + id +
-                "\n\tname= '" + name + '\'' +
-                "\n\tdueDate= " + dueDate +
-                "\n\tstatus= " + status +
-                "\n\tstartDate= " + startDate +
-                "\n\tassignedTo= '" + assignedTo + '\'';
+        return "\n\t{\"id\"" + ": " + id + "," +
+                "\n\t\"name\"" + ": \""  + name  + "\","  +
+                "\n\t\"dueDate\"" + ": \""  + dueDate + "\","  +
+                "\n\t\"status\"" + ": \""  + status + "\","  +
+                "\n\t\"startDate\"" + ": \""  + startDate + "\","  +
+                "\n\t\"assignedTo\"" + ": \""  + assignedTo + "\"\n\t}";
     }
+
 }

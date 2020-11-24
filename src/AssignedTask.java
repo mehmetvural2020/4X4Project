@@ -13,13 +13,22 @@ public class AssignedTask extends Task{
         this.assignedTo = assignedTo;
     }
 
+//    @Override
+//    public String toString() {
+//        return "\nAssignedTask : " +
+//                "\n\tid= " + id +
+//                "\n\tname= '" + name + '\'' +
+//                "\n\tdueDate= " + dueDate +
+//                "\n\tstatus= " + status +
+//                "\n\tassignedTo= '" + assignedTo + '\'';
+//    }
+
     @Override
     public String toString() {
-        return "\nAssignedTask : " +
-                "\n\tid= " + id +
-                "\n\tname= '" + name + '\'' +
-                "\n\tdueDate= " + dueDate +
-                "\n\tstatus= " + status +
-                "\n\tassignedTo= '" + assignedTo + '\'';
+        return "\n\t{\"id\"" + ": " + id + "," +
+                "\n\t\"name\"" + ": \""  + name  + "\","  +
+                "\n\t\"dueDate\"" + ": \""  + dueDate + "\","  +
+                "\n\t\"status\"" + ": \""  + status + "\","  +
+                "\n\t\"assignedTo\"" + ": \""  + assignedTo + "\"\n\t}";
     }
 }

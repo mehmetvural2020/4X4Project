@@ -19,11 +19,13 @@ public class WriteToJSONFormat {
 //        Main.taskList.forEach((task) -> System.out.println(task));
         Main.taskList.forEach((task) -> taskJSON.add(task));
 
-        try (FileWriter file = new FileWriter("taskJSON1.json")) {
+        try (FileWriter file = new FileWriter("taskJSON2.json")) {
             file.write(taskJSON.toString());
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
 }

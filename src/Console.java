@@ -1,5 +1,9 @@
+import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
+
 public class Console {
-    public static void console() {
+    public static void console() throws IOException, ParseException {
         int toDo = 0;
         while(toDo != 10){
             System.out.println();
@@ -26,7 +30,7 @@ public class Console {
                         Main.taskList.add(CreateTask.createTask());
                         break;
                     case 2:
-                        AddTasksAutomatically.addTask();
+                        readFromJSONFile.readFromJSONFile();
                         break;
                     case 3:
                         ShowTaskList.showList();

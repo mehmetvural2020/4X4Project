@@ -1,4 +1,15 @@
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.nio.file.Files;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class AddTasksAutomatically {
     public static void addTask() {
@@ -14,6 +25,6 @@ public class AddTasksAutomatically {
         Main.taskList.add(task4);
         Main.taskList.add(task5);
         Main.taskList.add(task6);
-
     }
+
 }

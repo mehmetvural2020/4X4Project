@@ -9,13 +9,13 @@ public class Console {
             System.out.println();
             System.out.print("What would you like to do?\n" +
                     "1- Create a Task\n" +
-                    "2- Add Task Automatically\n" +
+                    "2- Add Task from JSON file\n" +
                     "3- Show all Tasks\n" +
                     "4- Sort tasks by name\n" +
                     "5- Sort tasks by due date\n" +
                     "6- Delete a task by id\n" +
                     "7- Update a task name get by id\n" +
-                    "8-Update task description get by id\n" +
+                    "8-Update task Due Date get by id\n" +
                     "9-Export task JSON file\n" +
                     "10- Exit\n" +
                     "Please enter number from 1 to 10 : ");
@@ -48,7 +48,7 @@ public class Console {
                         UpdateTask.updateTaskNameById();
                         break;
                     case 8:
-                        UpdateTask.updateTaskDescriptionById();
+                        UpdateTask.updateTaskDueDateById();
                         break;
                     case 9:
                         WriteToJSONFormat.writeJSONFile();

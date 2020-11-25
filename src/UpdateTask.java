@@ -26,9 +26,6 @@ public class UpdateTask {
         if(checkId == -1) System.out.println("There is no this Task id in the Task list.");
     }
 
-    public static void updateTaskDescriptionById() {
-    }
-
     public static void updateTaskDueDateById() {
         System.out.print("Please enter the Task id to update the Task Due Date : ");
         int id = Integer.parseInt(Main.scanner.nextLine());
